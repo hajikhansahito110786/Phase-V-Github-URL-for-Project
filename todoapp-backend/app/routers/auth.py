@@ -15,7 +15,7 @@ from app.dependencies import get_current_user
 router = APIRouter()
 
 # ---------- JWT Configuration ----------
-SECRET_KEY = os.getenv("JWT_SECRET", "xyz")
+SECRET_KEY = os.getenv("JWT_SECRET", "notset")
 ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 60 * 24  # 1 day
 
