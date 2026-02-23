@@ -4,7 +4,7 @@ from sqlalchemy.orm import sessionmaker
 import os
 
 # Use the environment variable for DATABASE_URL
-DATABASE_URL = os.getenv("DATABASE_URL", "postgresql://postgres:change-me@localhost/todoapp")
+DATABASE_URL = os.getenv("DATABASE_URL", "notset")
 
 engine = create_engine(DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
@@ -16,4 +16,5 @@ def get_db():
     try:
         yield db
     finally:
+
         db.close()
