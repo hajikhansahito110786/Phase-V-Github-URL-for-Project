@@ -1,0 +1,75 @@
+# Global settings
+global:
+  namespace: todoapp
+  host: 148.230.88.136
+
+# Backend configuration
+backend:
+  name: todoapp-backend
+  replicaCount: 2
+  image:
+    repository: todo-backend
+    tag: latest
+    pullPolicy: IfNotPresent
+  service:
+    type: NodePort
+    port: 8840
+    nodePort: 30840
+  env:
+    DATABASE_URL: "postgresql://postgres:change-me@{{ .Release.Name }}-postgresql:5432/todoapp?schema=public"
+    JWT_SECRET: "your-secret-key-change-this"
+  resources:
+    requests:
+      memory: "256Mi"
+      cpu: "250m"
+    limits:
+      memory: "512Mi"
+      cpu: "500m"
+
+# Frontend configuration
+frontend:
+  name: todoapp-frontend
+  replicaCount: 2
+  image:
+    repository: todo-frontend
+    tag: latest
+    pullPolicy: IfNotPresent
+  service:
+    type: NodePort
+    port: 3430
+    nodePort: 31982
+  env:
+    NEXT_PUBLIC_API_URL: "http://{{ .Values.global.host }}:{{ .Values.backend.service.nodePort }}"
+    NEXT_PUBLIC_VPS_IP: "{{ .Values.global.host }}"
+  resources:
+    requests:
+      memory: "256Mi"
+      cpu: "250m"
+    limits:
+      memory: "512Mi"
+      cpu: "500m"
+
+# PostgreSQL configuration
+postgresql:
+  enabled: false
+  auth:
+    username: postgres
+    password: "change-me"
+    database: todoapp
+  primary:
+    persistence:
+      enabled: false
+      size: 8Gi
+      storageClass: "standard"
+  image:
+    tag: 15
+
+# Ingress (optional)
+ingress:
+  enabled: false
+  host: todoapp.local
+  annotations: {}
+# Google AI configuration
+google:
+  apiKey: "AIzaSyCRYqtMPCtMHyL6z2Co_gH99LrU5shbylo"
+

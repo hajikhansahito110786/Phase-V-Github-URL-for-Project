@@ -1,0 +1,77 @@
+INFO:     Will watch for changes in these directories: ['/root/todoapp-backend']
+INFO:     Uvicorn running on http://0.0.0.0:8840 (Press CTRL+C to quit)
+INFO:     Started reloader process [500664] using WatchFiles
+INFO:     Started server process [500679]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     148.230.88.136:45248 - "GET /health HTTP/1.1" 200 OK
+INFO:     148.230.88.136:51390 - "GET /health HTTP/1.1" 200 OK
+INFO:     223.123.104.249:33118 - "GET / HTTP/1.1" 200 OK
+INFO:     223.123.104.249:33118 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     223.123.104.249:33099 - "GET /health HTTP/1.1" 200 OK
+INFO:     223.123.104.249:33099 - "GET /health HTTP/1.1" 200 OK
+INFO:     223.123.104.249:33119 - "GET /health HTTP/1.1" 200 OK
+INFO:     223.123.104.249:33088 - "GET / HTTP/1.1" 200 OK
+INFO:     223.123.104.249:20746 - "GET /docs HTTP/1.1" 200 OK
+INFO:     223.123.104.249:20747 - "GET /openapi.json HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'app/main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [500679]
+INFO:     Started server process [2467268]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     127.0.0.1:51522 - "GET /health HTTP/1.1" 200 OK
+INFO:     223.123.110.7:3597 - "GET / HTTP/1.1" 200 OK
+INFO:     223.123.110.7:3597 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+WARNING:  WatchFiles detected changes in 'app/main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [2467268]
+INFO:     Started server process [2735359]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [2735359]
+INFO:     Started server process [2809736]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:app.main:Health check called
+INFO:     127.0.0.1:45156 - "GET /health HTTP/1.1" 200 OK
+INFO:app.main:Root endpoint called
+INFO:     127.0.0.1:45172 - "GET / HTTP/1.1" 200 OK
+INFO:app.main:Health check called
+INFO:     148.230.88.136:37778 - "GET /health HTTP/1.1" 200 OK
+INFO:app.main:Root endpoint called
+INFO:     148.230.88.136:37792 - "GET / HTTP/1.1" 200 OK
+INFO:app.main:Health check called
+INFO:     148.230.88.136:49122 - "GET /health HTTP/1.1" 200 OK
+INFO:app.main:Root endpoint called
+INFO:     148.230.88.136:49128 - "GET / HTTP/1.1" 200 OK
+INFO:app.main:Root endpoint called
+INFO:     223.123.110.7:3585 - "GET / HTTP/1.1" 200 OK
+INFO:app.main:Health check called
+INFO:     223.123.110.7:3600 - "GET /health HTTP/1.1" 200 OK
+INFO:app.main:Root endpoint called
+INFO:     223.123.110.7:3586 - "GET / HTTP/1.1" 200 OK
+INFO:app.main:Health check called
+INFO:     223.123.110.7:3587 - "GET /health HTTP/1.1" 200 OK
+INFO:app.main:Health check called
+INFO:     223.123.110.7:3605 - "GET /health HTTP/1.1" 200 OK
+INFO:app.main:Root endpoint called
+INFO:     223.123.110.7:3602 - "GET / HTTP/1.1" 200 OK
+INFO:app.main:Health check called
+INFO:     148.230.88.136:59174 - "GET /health HTTP/1.1" 200 OK
+INFO:app.main:Health check called
+INFO:     148.230.88.136:59186 - "GET /health HTTP/1.1" 200 OK
+INFO:app.main:Health check called
+INFO:     223.123.110.7:3599 - "GET /health HTTP/1.1" 200 OK
+INFO:app.main:Health check called
+INFO:     223.123.110.7:13993 - "GET /health HTTP/1.1" 200 OK
+INFO:     223.123.110.7:13996 - "GET /docs HTTP/1.1" 200 OK
+INFO:     223.123.110.7:13996 - "GET /openapi.json HTTP/1.1" 200 OK
