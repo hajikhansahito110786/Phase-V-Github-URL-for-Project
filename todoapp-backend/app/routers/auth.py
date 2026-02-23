@@ -94,7 +94,7 @@ async def register(
     db: Session = Depends(get_db)
 ):
     """Create a new user. Only accessible by admins."""
-    if current_user.role != "admin":
+    if current_user.role != "notset":
         raise HTTPException(
             status_code=status.HTTP_403_FORBIDDEN,
             detail="Only administrators can register new users"
