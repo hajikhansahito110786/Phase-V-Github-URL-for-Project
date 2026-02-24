@@ -16,8 +16,8 @@ backend:
     port: 8840
     nodePort: 30840
   env:
-    DATABASE_URL: "postgresql://postgres:change-me@{{ .Release.Name }}-postgresql:5432/todoapp?schema=public"
-    JWT_SECRET: "your-secret-key-change-this"
+    DATABASE_URL: "pastehere"
+    JWT_SECRET: "pasthere"
   resources:
     requests:
       memory: "256Mi"
@@ -53,9 +53,9 @@ frontend:
 postgresql:
   enabled: false
   auth:
-    username: postgres
-    password: "change-me"
-    database: todoapp
+    username: pasthere
+    password: pasthere
+    database: pasthere
   primary:
     persistence:
       enabled: false
@@ -71,5 +71,5 @@ ingress:
   annotations: {}
 # Google AI configuration
 google:
-  apiKey: "AIzaSyCRYqtMPCtMHyL6z2Co_gH99LrU5shbylo"
+  apiKey: "pastehere"
 
